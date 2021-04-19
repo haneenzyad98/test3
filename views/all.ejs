@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+    <%toto.forEach(itam=>{%>
+    <form action="/all" method="POST">
+    <h3><%= itam.name%></h3>
+    <input type="hidden" value="<%= itam.name%>" name="one">
+
+    <img src="<%= itam.img%>">
+    <input type="hidden" value="<%= itam.img%>" name="two">
+
+    <p><%= itam.level%></p>
+    <input type="hidden" value="<%= itam.level%>" name="three">
+<button>save</button>
+
+    </form>
+    <%})%>
+</main>
+</body>
+</html>

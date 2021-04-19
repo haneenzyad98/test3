@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+    <h3><%= data.name%></h3>
+    <img src="<%= data.image%>">
+    <p><%= data.level%></p>
+
+
+    <form action="/details/<%= data.id%>?_method=PUT" method="POST">
+<input type="text" value="<%= data.name%>" name="name">
+<input type="text" value="<%= data.image%>" name="image">
+<input type="text" value="<%= data.level%>" name="level">
+<input type="hidden" value="<%= data.id%>" name="id">
+<button>update data</button>     
+    </form>
+
+    <form action="/details/<%= data.id%>?_method=DELETE" method="POST">
+        <input value="<%= data.id%>" name="id">
+<button>DELETE</button>
+    </form>
+</main>
+</body>
+</html>
